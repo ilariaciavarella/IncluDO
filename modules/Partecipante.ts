@@ -22,15 +22,15 @@ export class Partecipante implements IPartecipante {
 	) {}
 
 	iscrivitiCorso(corso: ICorso): void {
-		if (corso.elencoIscritti.includes(this)) {
+		if (corso.elencoIscritti.indexOf(this) !== -1) {
 			console.log(
-				`${this.nome} ${this.cognome} risulta già iscritto al corso di ${corso.titolo}`
+				`${this.nome} ${this.cognome} risulta già iscritt* al corso di ${corso.titolo}`
 			);
 		} else {
-			corso.aggiungiPartecipante(this);
 			console.log(
-				`${this.nome} ${this.cognome} è stato correttamente iscritto al corso di ${corso.titolo}`
+				`${this.nome} ${this.cognome} si è correttamente iscritt* al corso di ${corso.titolo}`
 			);
+			corso.aggiungiPartecipante(this);
 		}
 	}
 }

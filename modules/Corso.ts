@@ -20,9 +20,15 @@ export class Corso implements ICorso {
 	) {}
 
 	aggiungiPartecipante(partecipante: IPartecipante): void {
-		this.elencoIscritti.push(partecipante);
-		console.log(
-			`${partecipante.nome} ${partecipante.cognome} è stato aggiunto agli iscritti del corso di ${this.titolo}`
-		);
+		if (this.elencoIscritti.indexOf(partecipante) === -1) {
+			this.elencoIscritti.push(partecipante);
+			console.log(
+				`${partecipante.nome} ${partecipante.cognome} è stato aggiunt* all'elenco degli iscritti del corso di ${this.titolo}`
+			);
+		} else {
+			console.log(
+				`${partecipante.nome} ${partecipante.cognome} è già presente nella lista degli iscritti a questo corso`
+			);
+		}
 	}
 }
