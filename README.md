@@ -70,7 +70,7 @@ If you want to contribute, you will also need a code editor like VS Code or Atom
 
       Note: To execute it like this, you need to have Node.js installed on your device.
 
-   3. You will see the result in the console panel.
+   You will see the result in the console panel.
 
 ## License
 
