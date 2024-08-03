@@ -52,3 +52,39 @@ const corsoRicamo: ICorso = new Corso(
 	"20 mesi",
 	[]
 );
+
+const PanetteriaDalmazio: IAzienda = new Azienda(
+	"Panetteria Dalmazio",
+	"Cucina",
+	"Panetteria storica del centro di Siracusa, che sforna ogni giorno pane fresco e prodotti tipici della rosticceria siciliana",
+	["Panettiere", "Commesso"]
+);
+
+const AgoEFilo: IAzienda = new Azienda(
+	"Ago e Filo",
+	"Sartoria",
+	"Nuova sartoria in un piccolo paesino in provincia di Napoli, formata da uno staff giovanissimo, che lavora sia con tecniche tradizionali che innovative",
+	["Sarto", "Esperto in ricamo tradizionale"]
+);
+
+//Iscritti prima
+console.log("Elenchi iscritti prima:");
+console.log(corsoCeramiche.elencoIscritti);
+console.log(corsoCucina.elencoIscritti);
+console.log(corsoRicamo.elencoIscritti);
+
+//Iscrizioni
+AlidaZanesha.iscrivitiCorso(corsoCeramiche);
+KareemJalal.iscrivitiCorso(corsoRicamo);
+
+corsoCucina.aggiungiPartecipante(MarynaSvyatoslava);
+corsoRicamo.aggiungiPartecipante(KareemJalal);
+
+PanetteriaDalmazio.offriPosizione(MarynaSvyatoslava, "Panettiere");
+AgoEFilo.offriPosizione(KareemJalal, "Esperto in ricamo tradizionale");
+
+//Iscritti dopo
+console.log("Elenchi iscritti dopo:");
+console.log(corsoCeramiche.elencoIscritti);
+console.log(corsoCucina.elencoIscritti);
+console.log(corsoRicamo.elencoIscritti);
